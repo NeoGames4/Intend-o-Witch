@@ -17,7 +17,7 @@ def draw(screen):
         pygame.draw.circle(screen, o.default_color, (o.x - player.x + player_screen_x, o.y - player.y + player_screen_y), o.radius, width = 0)
 
     # Player
-    pygame.draw.circle(screen, (100, 80, 15), (player_pos_x, player_pos_y), player.radius, width = 0)
+    pygame.draw.circle(screen, (100, 80, 15), (player_screen_x, player_screen_y), player.radius, width = 0)
 
     # Update
     pygame.display.flip()

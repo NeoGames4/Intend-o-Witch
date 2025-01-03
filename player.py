@@ -10,9 +10,9 @@ class Player:
         self.health = 10
         self.inventory = []
     
-    def tick():
+    def tick(self):
         vx = input.read_x()
         vy = input.read_y()
         
-        x += (vx - 128) // 4 / 32
-        y += (vy - 128) // 4 / 32
+        self.x += (vx - 128) // 4 / 32
+        self.y += (vy - 128) // 4 / 32
