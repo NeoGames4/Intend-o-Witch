@@ -3,12 +3,14 @@ from game import *
 
 # Update GUI
 def draw(screen):
+    screen_width, screen_height = screen.get_size()
+    
     # Background
     screen.fill((40, 160, 35))
 
     # The player's location on screen
-    player_pos_x = screen.width/2
-    player_pos_y = screen.height/2
+    player_pos_x = screen_width/2
+    player_pos_y = screen_height/2
 
     # Objects (relative to the player)
     for o in objects:
