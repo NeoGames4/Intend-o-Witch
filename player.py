@@ -3,8 +3,7 @@ class Player:
         # Position
         self.x = x
         self.y = y
-        self.width = 10
-        self.height = 10
+        self.radius = 10
         # Game status
         self.health = 10
         self.inventory = []
