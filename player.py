@@ -10,19 +10,22 @@ class Player:
         # Game status
         self.health = 10
         self.inventory = []
+        self.direction = 0
     
     def tick(self):
-        joystick_x = input.read_x()
-        joystick_y = input.read_y()
+        vx = input.read_x()
+        vy = input.read_y()
 
-        velocity = max(1, math.sqrt((joystick_x**2) + (joystick_y**2)))
-
-        print('Joystick x: ', joystick_x, ', joystick y: ', joystick_y, ', total_v: ', velocity)
-
-        direction = math.atan(joystick_x/joystick_y)
-
-        vx = math.sin(direction) * velocity * 4
-        vy = math.cos(direction) * velocity * 4
+        velocity = math.hypot(vx, vy)
         
-        self.x += vx
-        self.y += vy
+        if velocity > 1:
+            vx /= velocity
+            vy /= velocity
+
+        vx = round(vx, 1)
+        vy = round(vy, 1)
+
+        self.direction = math.atan2(vx, vy)
+
+        self.x += vx * 2
+        self.y += vy * 2

@@ -24,10 +24,10 @@ def init():
     signal(SIGHUP, safe_exit)
 
 def read_x():
-    return read_joystick(7)/READ_XY_MAX - 0.5
+    return read_joystick(7)/READ_XY_MAX * 2 - 1
 
 def read_y():
-    return read_joystick(6)/READ_XY_MAX - 0.5
+    return read_joystick(6)/READ_XY_MAX * 2 - 1
 
 def read_joystick(input: int):
     ads7830_commands = (0x84, 0xc4, 0x94, 0xd4, 0xa4, 0xe4, 0xb4, 0xf4)
