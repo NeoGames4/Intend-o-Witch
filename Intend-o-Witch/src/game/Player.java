@@ -2,8 +2,6 @@ package game;
 
 public class Player {
 
-	public Player() {
-		// TODO Auto-generated constructor stub
-	}
+	public static int x = 0, y = 0;
 
 }
