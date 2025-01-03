@@ -1,6 +1,5 @@
 import pygame
-from main import read_ads7830
-from main import screen
+from game import *
 
-def draw():
-    pygame.draw.circle(screen, "green", (read_ads7830(7), read_ads7830(6)), 10)
+def draw(screen):
+    pygame.draw.circle(screen, "green", (player.x, player.y), 10)

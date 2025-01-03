@@ -20,7 +20,6 @@ def read_ads7830(input):
 pygame.init()
 screen = pygame.display.set_mode((480, 320))
 
-
 try:
     signal(SIGTERM, safe_exit)
     signal(SIGHUP, safe_exit)
@@ -31,7 +30,7 @@ try:
         screen.fill((255, 0, 0))
         
         
-        draw()
+        draw(screen)
         
         
         pygame.display.flip()
