@@ -4,3 +4,8 @@ class Object:
         self.y = y
         self.radius = radius
         self.default_color = default_color
+
+class SolidObject(Object):
+    def __init__(self, x, y, radius, default_color, health):
+        super().__init__(x, y, radius, default_color)
+        self.health = healthx
