@@ -5,6 +5,8 @@ from gpiozero import PWMLED
 import pygame
 from typing import Callable
 
+READ_XY_MAX = 255
+
 def safe_exit(signum, frame):
     pygame.quit()
     exit(1)
@@ -22,10 +24,10 @@ def init():
     signal(SIGHUP, safe_exit)
 
 def read_x():
-    return read_joystick(7)
+    return read_joystick(7)/READ_XY_MAX - 0.5
 
 def read_y():
-    return read_joystick(6)
+    return read_joystick(6)/READ_XY_MAX - 0.5
 
 def read_joystick(input: int):
     ads7830_commands = (0x84, 0xc4, 0x94, 0xd4, 0xa4, 0xe4, 0xb4, 0xf4)
