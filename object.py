@@ -8,4 +8,4 @@ class Object:
 class SolidObject(Object):
     def __init__(self, x, y, radius, default_color, health):
         super().__init__(x, y, radius, default_color)
-        self.health = healthx
+        self.health = health
