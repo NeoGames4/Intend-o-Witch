@@ -9,8 +9,9 @@ public class Launcher {
 								VERSION	= "0.x";
 	
 	public static final int FPS = 30;
-	
-	public static Frame frame = new Frame(new MainPanel());
+
+	public static MainPanel mainPanel = new MainPanel();
+	public static Frame frame = new Frame(mainPanel);
 	
 	public static void main(String[] args) {
 		System.out.println("Launching " + TITLE + " v" + VERSION + "...");

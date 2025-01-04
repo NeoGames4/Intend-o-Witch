@@ -17,14 +17,14 @@ public class Player {
 	
 	public static final Color color = new Color(100, 80, 15);
 	
-	public static final float VELOCITY_MULTIPLIER = 4;
+	public static final float VELOCITY_MULTIPLIER = 2;
 	
 	public static float distanceTo(float x, float y) {
 		return (float) Math.hypot(x-Player.x, y-Player.y);
 	}
 	
 	public static float distanceTo(Thingy t) {
-		return (float) Math.hypot(t.x-Player.x, t.y-Player.y);
+		return distanceTo(t.x, t.y);
 	}
 	
 	// FLOAT TO INT
