@@ -10,7 +10,7 @@ import pi.Launcher;
 
 public class Frame extends JFrame {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // ...
 	
 	public Frame(JPanel mainPanel) {
     	add(mainPanel);
