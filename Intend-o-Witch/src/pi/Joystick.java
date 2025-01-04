@@ -2,12 +2,12 @@ package pi;
 
 import com.diozero.api.I2CDevice;
 
-public class Input {
+public class Joystick {
     private static final int COMMAND_BIT = 0b10000100;
 
     private static final I2CDevice device = new I2CDevice(1, 0x4b);
 
-    public static int readADC(int channel) {
+    private static int readADC(int channel) {
         if (channel < 0 || channel > 7) {
             throw new IllegalArgumentException("Channel must be between 0 and 7");
         }
