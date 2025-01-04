@@ -31,10 +31,10 @@ public class Joystick {
         }
     }
 
-    public static int readX() {
-        return 2 * readADC(7) / 0xff - 1;
+    public static float readX() {
+        return 2f * readADC(7) / 0xff - 1;
     }
-    public static int readY() {
-        return 2 * readADC(6) / 0xff;
+    public static float readY() {
+        return 2f * readADC(6) / 0xff - 1;
     }
 }
