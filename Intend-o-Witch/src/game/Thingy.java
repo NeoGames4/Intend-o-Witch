@@ -13,8 +13,12 @@ public class Thingy {
 	public Thingy(float x, float y, float radius, Color defaultColor) {
 		this.x = x;
 		this.y = y;
-		this.radius = radius;
-		this.defaultColor = defaultColor;
+		setRadius(radius);
+		setDefaultColor(defaultColor);
+	}
+	
+	public float distanceTo(float x, float y) {
+		return (float) Math.hypot(x-this.x, y-this.y);
 	}
 	
 	// SETTER
@@ -47,11 +51,23 @@ public class Thingy {
 	
 	// GETTER
 	
-	public float getRadius() {
+	public float radius() {
 		return radius;
 	}
 	
-	public Color getDefaultColor() {
+	public int xInt() {
+		return Math.round(x);
+	}
+	
+	public int yInt() {
+		return Math.round(y);
+	}
+	
+	public int rInt() {
+		return Math.round(radius);
+	}
+	
+	public Color defaultColor() {
 		return defaultColor;
 	}
 

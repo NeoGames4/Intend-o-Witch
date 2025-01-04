@@ -4,10 +4,16 @@ import game.Frame;
 import game.MainPanel;
 
 public class Launcher {
-	public static MainPanel mainPanel = new MainPanel();
-	public static Frame frame = new Frame();
+	
+	public static final String	TITLE	= "Intend-o-Witch",
+								VERSION	= "0.x";
+	
+	public static final int FPS = 30;
+	
+	public static Frame frame = new Frame(new MainPanel());
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("Launching " + TITLE + " v" + VERSION + "...");
 	}
 
 }
