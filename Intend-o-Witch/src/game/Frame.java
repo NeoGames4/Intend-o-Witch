@@ -31,9 +31,10 @@ public class Frame extends JFrame {
         setTitle(Launcher.TITLE + " v" + Launcher.VERSION);
         setVisible(true);
         
-        Executors.newScheduledThreadPool(1).scheduleAtFixedRate(() -> {
+        /*Executors.newScheduledThreadPool(1).scheduleAtFixedRate(() -> {
 			mainPanel.repaint();
-			// …
-		}, 50, (int) (1000d/Launcher.FPS), TimeUnit.MILLISECONDS);
+
+            Game.tick();
+		}, 50, (int) (1000d/Launcher.FPS), TimeUnit.MILLISECONDS);*/
     }
 }

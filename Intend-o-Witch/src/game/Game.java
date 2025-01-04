@@ -10,4 +10,7 @@ public class Game {
 		things.add(new Thingy(20, 50, 5, Color.RED));
 	}}
 
+	public static void tick() {
+		Player.tick();
+	}
 }
